@@ -1,5 +1,54 @@
+html, body, form, main {
+    height: 100%;
+}
+
 body{
 
-  background-color: #AB8F4E;
+  background-color: #232A35;
 
+}
+
+.content{
+
+  width:90%;
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.mainheader{
+
+  border:1px red solid;
+
+  width:100%;
+
+}
+
+
+.iotd { grid-area: iotd; }
+.banner { grid-area: banner; }
+.solutions { grid-area: solutions; }
+.services { grid-area: services; }
+.tud { grid-area: tud; }
+.resources { grid-area: resources; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'iotd banner banner banner banner banner'
+    'iotd solutions services resources tud tud';
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  height:100%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
