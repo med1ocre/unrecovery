@@ -1,0 +1,91 @@
+html, body, form, main {
+    height: 100%;
+}
+
+body{
+
+  background-color: #232A35;
+  padding:10px;
+
+}
+
+a{
+
+  text-decoration: none;
+  color:white;
+
+}
+
+a:hover{
+
+  color:#232A35;
+
+}
+
+.content{
+
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.mainheader{
+
+  width:100%;
+
+  color:white;
+
+}
+
+
+.iotd { grid-area: iotd; }
+.banner { grid-area: banner; }
+.solutions { grid-area: solutions; }
+.services { grid-area: services; }
+.tud { grid-area: tud; }
+.resources { grid-area: resources; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'iotd banner banner banner banner banner'
+    'iotd solutions services resources tud tud';
+  grid-template-rows:auto 50px;
+  gap: 1px;
+  background-color: white;
+  padding: 1px;
+  height:100%;
+}
+
+.grid-container > div {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 900px) {
+
+  .grid-container {
+    grid-template-rows:auto 60px;
+  }
+
+  .grid-container > div {
+    font-size: 15px;
+  }
+
+  }
+
+@media screen and (max-width: 900px) {
+  .grid-container > div {
+    font-size: 10px;
+  }
+
+  .iotdimage{
+
+    width:75px;
+    height:75px;
+
+  }
+}
